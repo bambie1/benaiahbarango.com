@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <main className="flex tracking-tighter w-full flex-1 flex-col items-center justify-center px-4 lg:px-20 text-center">
         <div>
           <h1 className="text-4xl lg:text-6xl font-bold">Benaiah Barango</h1>
-          <p className="text-gray-500 font-light text-lg lg:text-2xl mt-2">
+          <p className="text-gray-500 font-light text-xl lg:text-2xl mt-2">
             Javascript Engineer @ Fullscript
           </p>
 
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
           <section className="mt-5">
             <p>Looking for a website?</p>
-            <p className="text-gray-500 lg:text-lg">
+            <p className="text-gray-500 text-lg">
               Reach out on{" "}
               <Link
                 className="underline"
