@@ -1,36 +1,13 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
-import { FC } from "react";
 
+import SEO from "../src/components/SEO";
 import SVGLinks from "../src/components/SVGLinks";
-
-const PROJECTS = [
-  {
-    title: "SoPlugged",
-    description: "A website to find black-owned businesses in Canada",
-    link: {
-      title: "soplugged.com",
-      href: "https://www.soplugged.com",
-    },
-  },
-  {
-    title: "Treats Royale",
-    description: "A Toronto-based bakery business built using Shopify's API",
-    link: {
-      title: "treatsroyale.ca",
-      href: "https://www.treatsroyale.ca",
-    },
-  },
-];
 
 const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
-      <Head>
-        <title>Benaiah Barango | Portfolio</title>
-        <link rel="icon" href="/favicon.png" />
-      </Head>
+      <SEO />
 
       <main className="flex tracking-tighter w-full flex-1 flex-col items-center justify-center px-4 lg:px-20 text-center">
         <div>
