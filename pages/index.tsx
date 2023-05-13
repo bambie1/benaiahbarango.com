@@ -1,79 +1,55 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 import SEO from "../src/components/SEO";
 import SVGLinks from "../src/components/SVGLinks";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
+    <div className="flex min-h-screen flex-col">
       <SEO />
 
-      <main className="flex tracking-tighter w-full flex-1 flex-col items-center justify-center px-4 lg:px-20 text-center">
-        <div>
-          <h1 className="text-4xl lg:text-6xl font-bold">Benaiah Barango</h1>
-          <p className="text-gray-500 font-light text-xl lg:text-2xl mt-2">
-            Javascript Engineer @ Fullscript
+      <header className="flex w-full absolute top-0 pt-4 lg:pt-10 flex-col justify-center max-w-3xl px-4 lg:px-20">
+        <Image src="/Logo.png" width={35} height={35} alt="" />
+      </header>
+
+      <main className="flex tracking-tight w-full flex-1 flex-col justify-center max-w-3xl px-4 lg:px-20">
+        <h1 className="text-4xl lg:text-5xl font-bold">Benaiah Barango</h1>
+        <p className="text-gray-600 font-light lg:text-xl mt-2 lg:mt-4">
+          I am a Design engineer based in Ontario, Canada. I work on the Aviary
+          design system at{" "}
+          <Link
+            href="https://fullscript.com/"
+            target="_blank"
+            className="underline hover:text-[#437256] transition duration-150 hover:no-underline"
+          >
+            Fullscript
+          </Link>{" "}
+          and freelance as a UX designer.
+        </p>
+
+        <SVGLinks />
+
+        <section className="mt-5">
+          <p className="text-lg">
+            Looking for a website?{" "}
+            <Link
+              href="mailto:benbarango@gmail.com"
+              target="_blank"
+              rel="norefferer"
+              className="underline text-gray-600 hover:text-black transition duration-150"
+            >
+              Send me a message
+            </Link>
           </p>
-
-          <SVGLinks />
-
-          <section className="mt-5">
-            <p>Looking for a website?</p>
-            <p className="text-gray-500 text-lg">
-              Reach out on{" "}
-              <Link
-                className="underline"
-                href="https://www.soplugged.com/pro"
-                target="_blank"
-                rel="norefferer"
-              >
-                SoPlugged Pro
-              </Link>
-            </p>
-          </section>
-        </div>
-
-        <hr className="w-full max-w-md mt-10 mb-6" />
-
-        <div>
-          <div className="flex flex-wrap gap-2">
-            <p>Currently maintaining:</p>
-            <ul>
-              <li>
-                <ProjectLink href="soplugged.com" title="SoPlugged" />
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex items-center justify-center flex-wrap gap-2">
-            <p>Past projects:</p>
-            <ul>
-              <li>
-                <ProjectLink href="treatsroyale.ca" title="Treats Royale" />
-              </li>
-            </ul>
-          </div>
-        </div>
+        </section>
       </main>
 
-      <footer className="flex py-4 w-full items-center justify-center text-sm text-gray-400">
+      <footer className="flex py-4 px-4 lg:px-20 w-full text-gray-600">
         <p>Copyright. {new Date().getFullYear()}</p>
       </footer>
     </div>
-  );
-};
-
-const ProjectLink = ({ href, title }: { href: string; title: string }) => {
-  return (
-    <Link
-      href={`https://www.${href}`}
-      title={title}
-      className="underline text-gray-500 font-light"
-      target="_blank"
-    >
-      {href}
-    </Link>
   );
 };
 

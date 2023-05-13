@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const DESCRIPTION =
-  "Javascript Engineer at Fullscript. Looking for a website? Reach out on soplugged.com/pro";
+  "I am a Design engineer based in Ontario, Canada focused on building aesthetic and user-friendly websites.";
 const TITLE = "Benaiah Barango | Portfolio";
 
 const SEO = () => {
