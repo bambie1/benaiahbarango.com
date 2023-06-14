@@ -35,10 +35,10 @@ const HomePage = ({
     }));
 
   return (
-    <div className="flex min-h-screen w-full max-w-lg lg:max-w-screen-2xl mx-auto flex-col">
+    <div className="flex min-h-screen relative w-full max-w-lg lg:max-w-screen-2xl mx-auto flex-col">
       <SEO />
 
-      <div className="fixed lg:top-0 right-0 bottom-0 w-full h-[150px] lg:w-1/3 -z-50 lg:h-full bg-gray-200"></div>
+      <div className="absolute lg:fixed lg:top-0 right-0 bottom-0 w-full h-[35vh] lg:w-1/3 -z-50 lg:h-full bg-gray-200"></div>
       <main className="grid lg:grid-cols-2 gap-48 lg:gap-10 tracking-tight w-full flex-1 flex-col justify-center mt-36 mb-10 lg:mt-20 items-center px-4 lg:px-20">
         <div className="lg:max-w-xl">
           <div className="aspect-square w-16 mb-10 border border-black relative rounded-full overflow-hidden">
