@@ -5,4 +5,14 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.dribbble.com",
+        port: "",
+        // pathname: '/account123/**',
+      },
+    ],
+  },
 };

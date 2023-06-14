@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <PlausibleProvider domain="benaiahbarango.com">
-      <div className={inter.className}>
+      <div className={`${inter.className} overflow-hidden`}>
         <Component {...pageProps} />
       </div>
     </PlausibleProvider>
