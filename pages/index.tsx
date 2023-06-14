@@ -39,7 +39,7 @@ const HomePage = ({
       <SEO />
 
       <div className="fixed lg:top-0 right-0 bottom-0 w-full h-[150px] lg:w-1/3 -z-50 lg:h-full bg-gray-200"></div>
-      <main className="grid lg:grid-cols-2 gap-24 lg:gap-10 tracking-tight w-full flex-1 flex-col justify-center mt-36 mb-10 lg:mt-20 items-center px-4 lg:px-20">
+      <main className="grid lg:grid-cols-2 gap-48 lg:gap-10 tracking-tight w-full flex-1 flex-col justify-center mt-36 mb-10 lg:mt-20 items-center px-4 lg:px-20">
         <div className="lg:max-w-xl">
           <div className="aspect-square w-16 mb-10 border border-black relative rounded-full overflow-hidden">
             <Image
@@ -94,6 +94,13 @@ const HomePage = ({
             rel="noreferrer"
             className="relative group"
           >
+            <Image
+              src="/recent_work.svg"
+              alt="Check out my recent work"
+              width={241}
+              height={140}
+              className="absolute -top-28 lg:-top-36 z-20 right-0 lg:-right-10"
+            />
             {topShots.map((shot, index) => (
               <>
                 <Image
