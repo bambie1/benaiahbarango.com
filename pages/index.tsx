@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
 
-import SEO from "../src/components/SEO";
-import SVGLinks from "../src/components/SVGLinks";
+import SEO from "@components/SEO";
+import SVGLinks from "@components/SVGLinks";
 
 interface DribbleShot {
   html_url: string;
@@ -24,21 +24,18 @@ interface DribbleShot {
 const HomePage = ({
   shots,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const topShots = shots
-    ?.slice(0, 3)
-    .sort(() => Math.random() - Math.random())
-    .map((shot) => ({
-      title: shot.title,
-      id: shot.id,
-      image_large: shot.images.hidpi,
-      image_small: shot.images.two_x,
-    }));
+  const topShots = shots?.slice(1, 4).map((shot) => ({
+    title: shot.title,
+    id: shot.id,
+    image_large: shot.images.hidpi,
+    image_small: shot.images.two_x,
+  }));
 
   return (
     <div className="flex min-h-screen relative w-full max-w-lg lg:max-w-screen-2xl mx-auto flex-col">
       <SEO />
 
-      <div className="absolute lg:fixed lg:top-0 right-0 bottom-0 w-full h-[35vh] lg:w-1/3 -z-50 lg:h-full bg-gray-200"></div>
+      <div className="absolute lg:fixed lg:top-0 right-0 bottom-0 w-full h-[35vh] lg:w-1/3 -z-50 lg:h-full bg-gray-100"></div>
       <main className="grid lg:grid-cols-2 gap-48 lg:gap-10 tracking-tight w-full flex-1 flex-col justify-center mt-36 mb-10 lg:mt-20 items-center px-4 lg:px-20">
         <div className="lg:max-w-xl">
           <div className="aspect-square w-16 mb-10 border border-black relative rounded-full overflow-hidden">
@@ -72,19 +69,6 @@ const HomePage = ({
             .
           </p>
           <SVGLinks />
-          <section className="mt-5">
-            <p className="text-lg">
-              Looking for a website?{" "}
-              <Link
-                href="mailto:benbarango@gmail.com"
-                target="_blank"
-                rel="norefferer"
-                className="underline text-gray-600 hover:text-black transition duration-150"
-              >
-                Send me a message
-              </Link>
-            </p>
-          </section>
         </div>
 
         <div className="flex max-w-xl ml-auto w-full gap-6 lg:gap-0 flex-col">
@@ -173,7 +157,16 @@ const HomePage = ({
         </div>
       </main>
 
-      <footer className="flex py-4 px-4 lg:px-20 w-full text-gray-600">
+      <footer className="flex py-4 px-4 lg:px-20 w-full justify-between gap-10 items-center text-gray-600">
+        <Link
+          href="mailto:benbarango@gmail.com"
+          target="_blank"
+          rel="norefferer"
+          className="text-gray-600 px-4 py-2 hover:bg-gray-50 bg-gray-100 rounded-lg flex items-center gap-2 transition duration-150"
+        >
+          <span className="bg-green-500 w-2 aspect-square rounded-full animate-pulse"></span>
+          Available for new projects
+        </Link>
         <p>Copyright. {new Date().getFullYear()}</p>
       </footer>
     </div>

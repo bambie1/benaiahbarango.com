@@ -11,6 +11,7 @@ module.exports = {
         fullscript: "#437256",
         soplugged: "#4e3505",
         dribbble: "#EA4C89",
+        hashnode: "#3367F6",
       },
     },
   },
